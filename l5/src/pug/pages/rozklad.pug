@@ -1,0 +1,60 @@
+extends ../layout/main
+
+block variables
+  - var title = "Rozklad page";
+  - var pageClass = "index-page";
+
+block styles
+  style.
+    td{
+      text-align: center;
+    }
+    th, tr > td:first-child{
+      background-color: #40E0D0;
+    }
+    tr > th:first-child{
+      background-color: #fff;
+    }
+
+block content
+  main
+    table(border='1' width='100%' cellpadding='5')
+      caption
+        b Мое расписание на 2021 год (6 семестр)
+      tbody
+        tr
+          th
+          th Понедельник
+          th Вторник
+          th Среда
+          th Четверг
+          th Пятница
+        tr
+          td 11.25 AM
+          td -
+          td -
+          td -
+          td Численные методы в информатике / 41(1) / Левчук
+          td -
+        tr
+          td 12.55 AM
+          td Основы программной инженерии / 50(1) / Чопоров
+          td -
+          td Основы программной инженерии / 40(1) / Манько
+          td Практикум по программированию / 41(1) / Ткаченко
+          td Основы автоматизированного проектирования сложных объектов / 50(1) / Кудин
+        tr
+          td 14.30 PM
+          td Численные методы в информатике / 50(1) / Левчук
+          td Иностранный язык / 54(1) / Вертегел
+          td Основы автоматизированного проектирования сложных объектов / 40(1) / Кривохата
+          td Практикум по программированию / 41(1) / Ткаченко
+          td Front-end технологии / 62(1) / Лисняк
+        tr
+          td 16.05 PM
+          td -
+          td Front-end технологии / 40(1) / Кальниченко
+          td -
+          td -
+          td -
+  include ../includes/modules/positionFooter

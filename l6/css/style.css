@@ -1,0 +1,260 @@
+@import './reset.css';
+@import './menu.css';
+@import url('https://fonts.googleapis.com/css2?family=Ranchers&display=swap');
+
+body{
+  font-family: 'Ranchers', cursive;
+  background-image: linear-gradient(
+    145deg,
+    #FF2800,
+    #BF4630,
+    #A61A00,
+    #FF5D40,
+    #FF8973
+  );
+  overflow-x: hidden;
+}
+
+.container{
+  max-width: 1000px;
+  width: 1000px;
+  margin: 0 auto;
+  padding: 0;
+}
+/* Index page */
+
+.flex-position{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Index page cards */
+.wrap {
+  width: 260px;
+  height: 440px;
+  margin: 5px auto;
+  padding: 20px;
+  box-sizing: border-box;
+  background: white;
+  text-align: center;
+  font-family: 'Open Sans', sans-serif;
+  position: relative;
+}
+.wrap:after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-left: 200px solid #CCF9F6;
+  border-top: 220px solid #FFCE86;
+  border-right: 200px solid #FF9B6C;
+  border-bottom: 220px solid #CCF9F6;
+  z-index: -1;
+  left: -70px;
+  top: 0;
+}
+.wrap p {
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.index-page > header > h1, .joke-page > header > h1, .news-page > header > h1, .photos-page > header > h1, .rozklad-page > header > h1{
+  text-align: center;
+  padding: 10px 0;
+}
+
+.index-page > footer, .news-page > footer, .photos-page > footer, .rozklad-page > footer {
+  min-height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Joke page */
+.joke-page > main > h2, .photos-page > main > h2{
+  margin: 50px 0;
+  text-align: center;
+  font-size: 40px;
+}
+
+/* News page */
+.news-page > main > h2{
+  text-align: center;
+  margin: 10px 0;
+}
+
+.news-page > main > section, .photos-page > main > section{
+  display: flex;
+  flex-wrap: wrap;
+}
+
+/* cards */
+.slide {
+  display: block;
+  width: 400px; 
+  margin: 50px auto 0;
+  position: relative;
+}
+.slide img {
+  display: block;
+  position: relative;
+  max-width: 100%;
+  height: auto;
+}
+.slide-content {
+  margin: -10px 20px 0;
+  position: relative;
+  z-index: 3;
+  text-align: center;
+  transform: translateY(0);
+  transition: transform .4s ease-in-out;
+}
+.slide-content:before, .slide-content:after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  margin: 0 0 2px;
+  height: 1px;
+  box-shadow: 0 0 7px 0 rgba(0,0,0,0.6);
+  transition: .4s ease-in-out;
+}
+.slide-content:before {
+  left: 0;
+  right: 50%;
+  transform: rotate(1deg);
+}
+.slide-content:after {
+  right: 0;
+  left: 50%;
+  transform: rotate(-1deg);
+}
+.slide-item {
+  background: #FBFAF1;
+  padding: 20px 20px 18px;
+  position: relative;
+  z-index: 5;
+  border-radius: 0;
+  transition: .4s ease-in-out;
+}
+.slide-item .header_subimage {
+  color: #B4111A;
+  font-size: 18px;
+  margin-bottom: 15px;
+}
+.slide-item p {
+  font-size: 14px;
+  line-height: 1.5em;
+  color: #1E2630;
+}
+.slide:hover .slide-content{
+  transform:translateY(-10%);
+}
+.slide:hover .slide-item{
+  border-radius: 0 0 200px 200px/0 0 10px 10px;
+}
+.slide:hover .slide-content:before {
+  left: 10px;
+}
+.slide:hover .slide-content:after {
+  right: 10px;
+}
+.slide:hover .slide-content:before, .slide:hover .slide-content:after {
+  box-shadow: 0 0 16px 3px rgba(0,0,0,0.6);
+  margin: 0 0 6px;
+}
+.slide:hover .slide-content:before {
+  right: 50.4%;
+}
+.slide:hover .slide-content:after {
+  left: 50.4%;
+}
+
+/* Photos page */
+.box {
+  width: 400px;
+  margin: 50px auto 0;
+  position: relative;
+  overflow: hidden;
+}
+.box:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: rgba(0,0,0,0.3);
+  z-index: 1;
+  opacity: 0;
+  transition: all 0.4s ease-in-out;
+}
+.box-inner img {
+  transition: all 0.4s ease-in-out;
+  height: 270px;
+  width: 400px;
+}
+.text {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 50%;
+  margin-top: -40px;
+  text-align: center;
+  z-index: 2;
+}
+.text p {
+  font-family: 'Forum', cursive;
+  color: white;
+  display: inline-block;
+  font-size: 20px;
+  line-height: 75px;
+  font-weight: 400;
+  text-transform: uppercase;
+  border-width: 1px 0;
+  border-color: rgba(255,255,255,0.5);
+  border-style: solid;
+  opacity: 0;
+  transition: all 0.4s ease-in-out;
+}
+.box:hover:before {
+  opacity: 1;
+}
+.box:hover img {
+  transform: scale(1.1);
+}
+.box:hover .text p {
+  opacity: 1;
+}
+
+/* Rozklad page */
+td{
+  text-align: center;
+  padding: 5px;
+  border: 1px solid black;
+}
+th, tr > td:first-child{
+  background-color: #40E0D0;
+}
+tr > th:first-child{
+  background-color: inherit;
+}
+
+table > caption{
+  margin: 10px 0;
+  font-size: 30px;
+}
+
+table{
+  width: 100%;
+  border: 3px solid black;
+  border-collapse: collapse; 
+}
+
+th { 
+  text-align: left;
+  padding: 5px;
+  border: 1px solid black;
+}

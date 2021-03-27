@@ -1,0 +1,5 @@
+mixin navs(navs, links)
+  ul.navs
+    each nav,l in navs
+      - var f = '<a href="'+ links[l] +'">'
+      li!= f + nav + '</a>'

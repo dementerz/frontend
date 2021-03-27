@@ -1,0 +1,10 @@
+extends ../layout/main
+
+block variables
+  - var title = "Joke page";
+  - var pageClass = "index-page";
+
+block content
+  main(style='display: flex; justify-content: center; align-items: center; height: 400px;')
+      h1 Шутка, не пиши мне, я все равно не отвечу. Пойди лучше книгу прочти!
+  include ../includes/modules/positionFooter

@@ -1,0 +1,29 @@
+extends ../layout/main
+
+block variables
+  - var title = "Webpack + Pug main page";
+  - var pageClass = "index-page";
+
+block content
+  main
+    section
+      article
+        header
+          h2 Моя биография
+          p
+            | Опубликовано
+            time(datetime='2021-02-21T16:31:24+03:00') 21.02.2021
+        img(src='https://picsum.photos/300/300' alt='randomImage')
+        p
+          | Далеко-далеко за словесными горами в стране, гласных и согласных живут рыбные тексты. Снова мир языком сбить маленький продолжил речью. Дороге, запятой это.
+      article
+        header
+          h2 Мои увлечения
+          p
+            | Опубликовано
+            time(datetime='2021-02-21T16:31:24+03:00') 21.02.2021
+        img(src='https://picsum.photos/300/300' alt='randomImage')
+        p
+          | Далеко-далеко за словесными горами в стране, гласных и согласных живут рыбные тексты. Снова мир языком сбить
+          | маленький продолжил речью. Дороге, запятой это.
+  include ../includes/modules/footer
