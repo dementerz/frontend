@@ -1,0 +1,16 @@
+extends ../layout/main
+include ../utils/mixins/newsMixin
+
+block variables
+  - var title = "News Page";
+
+block content
+  main
+    h2 Последние новости
+    section
+      +articleBlock('./images/n1.jpg', 'https://iz.ru/1127926/2021-02-21/avstriia-predosteregla-es-o-chrezmernoi-reaktcii-na-situatciiu-s-navalnym', ' 21 февраля 2021, 11:24')
+      +articleBlock('./images/n2.jpg', 'https://iz.ru/1127905/2021-02-21/kandidat-v-genprokurory-ssha-poobeshchal-privlech-k-sudu-uchastnikov-shturma-kapitoliia', ' 21 февраля 2021, 09:28')
+      +articleBlock('./images/n3.jpg', 'https://iz.ru/1127895/2021-02-21/iran-izuchaet-predlozhenie-evrosoiuza-o-vstreche-po-svpd-s-ssha', ' 21 февраля 2021, 07:46')
+      +articleBlock('./images/n4.jpg', 'https://iz.ru/1127884/2021-02-21/tramp-vystupit-28-fevralia-vpervye-posle-ukhoda-s-posta-prezidenta', ' 21 февраля 2021, 05:16')
+      +articleBlock('./images/n5.jpg', 'https://iz.ru/1127996/2021-02-21/v-rosoboroneksporte-zaiavili-o-zhelanii-shesti-stran-priobresti-tank-armata', ' 21 февраля 2021, 14:29 ')
+  include ../includes/modules/footer

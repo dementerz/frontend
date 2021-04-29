@@ -1,0 +1,20 @@
+extends ../layout/main
+include ../utils/mixins/photoMixin
+
+block variables
+  - var title = "Photo Page";
+
+block content
+  main
+    h2 Фотоальбом
+    section
+      +figureBlock('http://alfa-content.ru/blog/gid-po-podboru-kartinok-dlya-statej/', './images/1.jpg', 'Рандоманя картинка')
+      +figureBlock('https://www.film.ru/movies/vozvraschenec', './images/2.jpg', 'Фильм Выживший')
+      +figureBlock('https://www.film.ru/movies/master-0', './images/3.jpg', 'Фильм Мастер')
+      +figureBlock('https://www.film.ru/movies/molchanie-yagnyat', './images/4.jpg', 'Фильм Молчание ягнят')
+      +figureBlock('https://www.film.ru/movies/pobeg-iz-shoushenka', './images/5.jpg', 'Фильм Побег из Шоушенка')
+      +figureBlock('https://www.film.ru/movies/proklyatyy-put', './images/6.jpg', 'Фильм Проклятый путь')
+      +figureBlock('https://www.film.ru/movies/temnyy-rycar', './images/7.jpg', 'Фильм Темный рыцарь')
+      +figureBlock('https://www.film.ru/movies/pervyy-chelovek-0', './images/8.jpg', 'Фильм Человек на Луне')
+      +figureBlock('https://www.film.ru/movies/chelovek-kotoryy-ubil-don-kihota', './images/9.jpg', 'Фильм Дон Кихот')
+  include ../includes/modules/footer

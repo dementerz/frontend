@@ -1,0 +1,12 @@
+mixin articleBlock(src, href, time)
+  article(class="slide")
+    img(src=src alt='')
+    .slide-content
+      .slide-item
+        p(class="header_subimage")
+          | Опубликовано 
+          time(datetime='21-02-2021')= time
+        p
+          | Далеко-далеко за словесными горами в стране гласных и согласных живут рыбные тексты. Реторический жаренные
+          | предупреждал рот lorem? Коварный моей составитель толку города!
+        a(target='_blank' href=href) Подробнее...
