@@ -1,0 +1,301 @@
+@import "../_variables.scss";
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: $small) and (max-width: $small) {
+  body {
+    width: 100vw;
+  }
+
+  body>.container {
+    width: 100%;
+  }
+
+  .container {
+    .flex-position {
+      main>section {
+        flex-wrap: nowrap;
+        flex-direction: column;
+      }
+    }
+  }
+
+  .flex-position {
+    >footer {
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      font-size: 10px;
+    }
+  }
+
+  nav {
+    margin-top: 30px;
+    margin-left: 30px;
+    width: 300px;
+    height: 84px;
+  }
+
+  nav{
+    .mcd-menu{
+      height: 84px;
+      width: 300px;
+    }
+  }
+
+  .mcd-menu li,
+  .mcd-menu li a {
+    height: 42px;
+  }
+
+  .flex-position{
+    >header{
+      >h1{
+        font-size: 20px;
+      }
+    }
+  }
+
+  table {
+    border: 0;
+  }
+
+  table caption {
+    font-size: 1.3em;
+  }
+
+  table thead {
+    border: none;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+  }
+
+  table tr {
+    border-bottom: 3px solid #ddd;
+    display: block;
+    margin-bottom: .625em;
+  }
+
+  table td {
+    border-bottom: 1px solid #ddd;
+    display: block;
+    font-size: .8em;
+    text-align: right;
+  }
+
+  table td::before {
+    /*
+    * aria-label has no advantage, it won't be read inside a table
+    content: attr(aria-label);
+    */
+    content: attr(data-label);
+    float: left;
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+
+  table td:last-child {
+    border-bottom: 0;
+  }
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: $small) and (max-width: $medium) {
+  body {
+    width: 100vw;
+  }
+
+  body>.container {
+    width: 100%;
+  }
+
+  .container {
+    .flex-position {
+      main>section {
+        flex-wrap: nowrap;
+        flex-direction: column;
+      }
+    }
+  }
+
+  nav{
+    margin-top: 30px;
+    margin-left: 0;
+  }
+
+  nav>.mcd-menu,
+  .mcd-menu li,
+  .mcd-menu li a {
+    height: 42px;
+  }
+
+  .flex-position {
+    >footer {
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+
+  table {
+    border: 0;
+  }
+
+  table caption {
+    font-size: 1.3em;
+  }
+
+  table thead {
+    border: none;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+  }
+
+  table tr {
+    border-bottom: 3px solid #ddd;
+    display: block;
+    margin-bottom: .625em;
+  }
+
+  table td {
+    border-bottom: 1px solid #ddd;
+    display: block;
+    font-size: .8em;
+    text-align: right;
+  }
+
+  table td::before {
+    /*
+    * aria-label has no advantage, it won't be read inside a table
+    content: attr(aria-label);
+    */
+    content: attr(data-label);
+    float: left;
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+
+  table td:last-child {
+    border-bottom: 0;
+  }
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: $medium) and (max-width: $large) {
+  body{
+    width: 100vw;
+  }
+
+  body > .container{
+    width: 100%;
+  }
+
+  .container {
+    .flex-position {
+      main{
+        > section {
+          flex-wrap: nowrap;
+          flex-direction: column;
+        }
+        > table {
+          width: 100%;
+          overflow-x: auto;
+          -webkit-overflow-scrolling: touch;
+        }
+      } 
+    }
+  }
+
+  nav>.mcd-menu, .mcd-menu li,
+  .mcd-menu li a {
+    height: 85px;
+  }
+
+  table {
+    border: 0;
+  }
+
+  table caption {
+    font-size: 1.3em;
+  }
+
+  table thead {
+    border: none;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+  }
+
+  table tr {
+    border-bottom: 3px solid #ddd;
+    display: block;
+    margin-bottom: .625em;
+  }
+
+  table td {
+    border-bottom: 1px solid #ddd;
+    display: block;
+    font-size: .8em;
+    text-align: right;
+  }
+
+  table td::before {
+    /*
+    * aria-label has no advantage, it won't be read inside a table
+    content: attr(aria-label);
+    */
+    content: attr(data-label);
+    float: left;
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+
+  table td:last-child {
+    border-bottom: 0;
+  }
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: $large) {
+  nav>.mcd-menu,
+  .mcd-menu li,
+  .mcd-menu li a {
+    height: 100px;
+  }
+
+  .container {
+    .flex-position {
+      main>section {
+        flex-wrap: wrap;
+        flex-direction: row;
+      }
+    }
+  }
+
+  .flex-position {
+    >footer {
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: $extraLarge) {
+  // у меня контейнер 1000px, так что похер на размер экрана
+}

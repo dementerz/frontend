@@ -1,0 +1,48 @@
+extends ../layout/main
+
+block variables
+  - var title = "Rozklad page";
+
+block content
+  main
+    table
+      caption
+        b Мое расписание на 2021 год (6 семестр)
+      thead
+        tr
+          th(scope='col') Время
+          th(scope='col') Понедельник
+          th(scope='col') Вторник
+          th(scope='col') Среда
+          th(scope='col') Четверг
+          th(scope='col') Пятница
+      tbody
+        tr
+          td(data-label='Время') 11.25 AM
+          td(data-label='Понедельник') -
+          td(data-label='Вторник') -
+          td(data-label='Среда') -
+          td(data-label='Четверг') Численные методы в информатике / 41(1) / Левчук
+          td(data-label='Пятница') -
+        tr
+          td(scope='row' data-label='Время') 12.55 AM
+          td(data-label='Понедельник') Основы программной инженерии / 50(1) / Чопоров
+          td(data-label='Вторник') -
+          td(data-label='Среда') Основы программной инженерии / 40(1) / Манько
+          td(data-label='Четверг') Практикум по программированию / 41(1) / Ткаченко
+          td(data-label='Пятница') Основы автоматизированного проектирования сложных объектов / 50(1) / Кудин
+        tr
+          td(scope='row' data-label='Время') 14.30 PM
+          td(data-label='Понедельник') Численные методы в информатике / 50(1) / Левчук
+          td(data-label='Вторник') Иностранный язык / 54(1) / Вертегел
+          td(data-label='Среда') Основы автоматизированного проектирования сложных объектов / 40(1) / Кривохата
+          td(data-label='Четверг') Практикум по программированию / 41(1) / Ткаченко
+          td(data-label='Пятница') Front-end технологии / 62(1) / Лисняк
+        tr
+          td(scope='row' data-label='Время') 16.05 PM
+          td(data-label='Понедельник') -
+          td(data-label='Вторник') Front-end технологии / 40(1) / Кальниченко
+          td(data-label='Среда') -
+          td(data-label='Четверг') -
+          td(data-label='Пятница') -
+  include ../includes/modules/footer

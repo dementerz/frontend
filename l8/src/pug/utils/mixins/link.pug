@@ -1,0 +1,5 @@
+mixin navs(navs, links, icons)
+  ul.mcd-menu
+    each nav,l in navs
+      - var f = '<a href="'+ links[l] +'">'
+      li!= f + '<i class="fas ' + icons[l] +  '"></i>' + '<strong>' + nav + '</strong>' + '<small>click it</small>' + '</a>'

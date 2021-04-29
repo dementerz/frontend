@@ -1,0 +1,27 @@
+extends ../layout/main
+
+block variables
+  - var title = "Webpack + Pug main page";
+
+block content
+  main
+    section
+      article(class="wrap")
+        h2 Моя биография
+        p
+          img(src='https://picsum.photos/300/300' alt='randomImage')
+        p
+          | Опубликовано
+          time(datetime='2021-02-21T16:31:24+03:00') 21.02.2021
+        p
+          | Далеко-далеко за словесными горами в стране, гласных и согласных живут рыбные тексты.
+      article(class="wrap")
+        h2 Мои увлечения
+        p
+          img(src='https://picsum.photos/300/300' alt='randomImage')
+        p
+          | Опубликовано
+          time(datetime='2021-02-21T16:31:24+03:00') 21.02.2021
+        p
+          | Далеко-далеко за словесными горами в стране, гласных и согласных живут рыбные тексты.
+  include ../includes/modules/footer

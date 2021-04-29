@@ -1,0 +1,99 @@
+@media print {
+  header {
+    >nav {
+      display: none;
+    }
+    >h1{
+      margin-bottom: 50px;
+    }
+  }
+
+  html,
+  body {
+    font-size: 14px !important;
+  }
+
+  h1 {
+    font-size: 24px !important;
+  }
+
+  h2 {
+    font-size: 20px !important;
+  }
+
+  h3 {
+    font-size: 18px !important;
+  }
+
+  *,
+  *:before,
+  *:after {
+    box-shadow: none;
+    text-shadow: none;
+  }
+
+  body {
+    font-family: Times New Roman, Georgia, Palatino !important;
+    .container{
+      .flex-position{
+        footer{
+          display: none;
+        }
+      }
+    }
+  }
+
+  ul,
+  ol,
+  table {
+    page-break-inside: avoid;
+  }
+
+  .container {
+    .flex-position {
+      justify-content: center;
+      flex-wrap: nowrap;
+      main > section > article, figure {
+        margin-top: 100px !important;
+      }
+    }
+  }
+  
+  a{
+    color: #B4111A;
+    text-decoration: none;
+    &[href^="http"]:after {
+      content: "Ссылка: <"attr(href) ">";
+      color: #000;
+    }
+  }
+
+  .box{
+    z-index: -1;
+    overflow: visible;
+  }
+
+  .text {
+    position: absolute;
+    left: 0;
+    top: -20px;
+    text-align: center;
+    z-index: 200;
+    p {
+      color: #000;
+      font-size: 20px;
+      font-weight: 700;
+      text-transform: uppercase;
+      opacity: 1;
+      border: none;
+    }
+  }
+
+  .wrap {
+    border: 1px solid #000;
+    &:after{
+      display: none;
+      border: none;
+    }
+  }
+}
