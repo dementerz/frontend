@@ -1,0 +1,10 @@
+@import "./_variables.scss";
+@import "./slider.scss";
+
+body {
+  font-family: 'Ranchers', cursive;
+  background-image: linear-gradient(145deg, $colorOne, $colorTwo, $colorThree, $colorFour, $colorFive);
+  background-repeat: no-repeat;
+  overflow-x: hidden;
+  min-height: 100vh;
+}
