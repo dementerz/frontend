@@ -1,0 +1,30 @@
+.wrap {
+  width: 260px;
+  height: 440px;
+  margin: 5px auto;
+  padding: 20px;
+  box-sizing: border-box;
+  background: white;
+  text-align: center;
+  font-family: 'Open Sans', sans-serif;
+  position: relative;
+
+  &:after {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-left: 200px solid #CCF9F6;
+    border-top: 220px solid #FFCE86;
+    border-right: 200px solid #FF9B6C;
+    border-bottom: 220px solid #CCF9F6;
+    z-index: -1;
+    left: -70px;
+    top: 0;
+  }
+
+  p {
+    font-size: 14px;
+    line-height: 1.5;
+  }
+}

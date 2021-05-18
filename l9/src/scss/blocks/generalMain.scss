@@ -1,0 +1,16 @@
+@import "./mainBlocks/index.scss";
+
+.flex-position {
+  >main {
+    >h2 {
+      margin: 50px 0;
+      text-align: center;
+      font-size: 40px;
+    }
+
+    >section {
+      display: flex;
+      flex-wrap: wrap;
+    }
+  }
+}
